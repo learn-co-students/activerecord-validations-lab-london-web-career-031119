@@ -9,11 +9,11 @@ class Post < ActiveRecord::Base
 
   
   def myValidate
-    # unless title
-    #   return
-    # end
+    unless title
+      return
+    end
     baits = ["Won't Believe", "Secret", "Top [number]", "Guess"]
-      if baits.none? { |bait| bait.match(title) }
+      if baits.none? { |bait| title.match(bait) }
         errors[:title] << 'Need a clickbait-y title please!'
       end
   end
