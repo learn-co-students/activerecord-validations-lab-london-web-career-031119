@@ -3,6 +3,6 @@ class Post < ActiveRecord::Base
    validates :content, {length:{minimum:250}}
    validates :summary, {length: {maximum:250}}
    validates_inclusion_of :category, in: ['Fiction', 'Non-Fiction']
-   validates_inclusion_of :title, in: ["Won't Believe", "Secret", "Top", "Guess"]
+   validates_inclusion_of :title, in: ["You Won't Believe These True Facts", "Secret", "Top", "Guess"]
 
 end
